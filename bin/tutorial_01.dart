@@ -1,11 +1,29 @@
-//import 'package:tutorial_01/tutorial_01.dart' as tutorial_01;
+class StudentsDetails{
+  //instance variable depends on objects --> globally decld variables
+  late String name;
+  late int age;
+  late var email;
+  //static variable depends on class --> globally decld variables
+  static String course = "Flutter"; //To access => classname.varibalename
+}
+
 void main(){
-  var name = "Mathew";
-  var age = 22;
-  var email  = '"mathewtomy1606@gmail.com"';
-  final string_course = '"Android flutter course"';
 
-  print("My name is $name and I am $age yrs old.\nMy email ID is $email.\nI am doing $string_course from 'Luninar Technolab'");
+  //object creation => classname object_name = classname();
+  //                => var object_name       = classname();
+   StudentsDetails stu1 = StudentsDetails(); //=> declearing object
 
+   print('Student 1 name = ${stu1.name = "Mathew"}');
+   print('student 1 age = ${stu1.age = 22 }');
+   print('student 1 email id = ${stu1.email = "mathew@gmail.com"}');
 
+   print('Course name = ${StudentsDetails.course} \n'); //static variable
+
+   var stu2 = StudentsDetails(); //=> declearing object
+
+   print('Student 2 name = ${stu2.name = "Jhon"}');
+   print('student 2 age = ${stu2.age = 23 }');
+   print('student 2 email id = ${stu2.email = "Jhon@gmail.com"}');
+
+   print('Course name = ${StudentsDetails.course} '); //static variable
 }
